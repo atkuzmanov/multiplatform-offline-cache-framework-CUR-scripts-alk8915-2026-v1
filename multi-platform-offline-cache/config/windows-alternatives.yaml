@@ -1,0 +1,349 @@
+# Windows alternatives for software that appears in Ubuntu/macOS manifests but has no
+# direct Windows equivalent. Top 2 (or more) alternatives per logical app.
+# Format: canonical name (from brew cask / apt / app name) -> winget_ids and/or choco_packages and/or vendor_urls.
+# Run: python3 scripts/merge-manifests.py to regenerate config/generated/winget-with-alternatives.txt
+
+# Terminal / shell (iTerm2, Warp, etc.)
+iterm2:
+  winget_ids:
+    - Microsoft.WindowsTerminal
+    - Alacritty.Alacritty
+warp:
+  winget_ids:
+    - Microsoft.WindowsTerminal
+    - Alacritty.Alacritty
+
+# Automation / keyboard (Hammerspoon, Karabiner)
+hammerspoon:
+  winget_ids:
+    - AutoHotkey.AutoHotkey
+    - Lexikos.AutoHotkey_v2
+karabiner-elements:
+  winget_ids:
+    - Microsoft.PowerToys
+    - AutoHotkey.AutoHotkey
+
+# Window management (Spectacle, Rectangle)
+spectacle:
+  winget_ids:
+    - Microsoft.PowerToys
+    - 9NBLGGH5FV99  # FancyZones (or use PowerToys)
+rectangle:
+  winget_ids:
+    - Microsoft.PowerToys
+    - 9NBLGGH5FV99
+
+# Mac-only backup/sync (Time Machine equivalent)
+# (Generic backup on Windows: restic, duplicity, etc. - add to main Windows manifest)
+
+# Documentation / dash (Dash)
+dash:
+  winget_ids:
+    - Zeal.Zeal
+    - Microsoft.Docs
+
+# FTP/SFTP (Cyberduck, FileZilla is cross-platform)
+cyberduck:
+  winget_ids:
+    - FileZilla.FileZilla
+    - WinSCP.WinSCP
+
+# Double Commander / Forklift / Commander One
+double-commander:
+  winget_ids:
+    - DoubleCommander.DoubleCommander
+    - FreeCommander.FreeCommander
+forklift:
+  winget_ids:
+    - DoubleCommander.DoubleCommander
+    - FreeCommander.FreeCommander
+commander-one:
+  winget_ids:
+    - DoubleCommander.DoubleCommander
+    - FreeCommander.FreeCommander
+
+# Unarchiver / BetterZip
+the-unarchiver:
+  winget_ids:
+    - 7zip.7zip
+    - RARLab.WinRAR
+betterzip:
+  winget_ids:
+    - 7zip.7zip
+    - RARLab.WinRAR
+keka:
+  winget_ids:
+    - 7zip.7zip
+    - RARLab.WinRAR
+
+# GPG Suite (macOS)
+gpg-suite:
+  winget_ids:
+    - GnuPG.GnuPG
+    - GPGExtension.GPGExtension
+
+# Media (Elmedia, VLC is cross-platform)
+elmedia-player:
+  winget_ids:
+    - VideoLAN.VLC
+    - MPC-HC.MPC-HC
+
+# QFinder Pro (QNAP)
+qfinder-pro:
+  winget_ids:
+    - QNAP.QfinderPro
+    - 9NBLGGH4N3F3  # QNAP NetBak
+
+# Reikey (macOS)
+reikey:
+  winget_ids:
+    - Microsoft.PowerToys
+    - Open-Shell.Open-Shell-Menu
+
+# RDM (Retina Display Manager)
+rdm:
+  winget_ids:
+    - Microsoft.PowerToys
+    - 9NZCCDP416TJ  # Custom Resolution Utility
+
+# SMC Fan Control
+smcfancontrol:
+  winget_ids:
+    - SpeedFan.SpeedFan
+    - 9NBLGGH4WWD3  # HWMonitor
+
+# Soundflower (audio routing)
+soundflower:
+  winget_ids:
+    - VB-Audio.Voicemeeter
+    - 9NBLGGH4N1S4  # Equalizer APO
+soundflowerbed:
+  winget_ids:
+    - VB-Audio.Voicemeeter
+    - 9NBLGGH4N1S4
+
+# XLD (audio converter)
+xld:
+  winget_ids:
+    - Audacity.Audacity
+    - Xiph.Flac
+
+# XRG (system monitor)
+xrg:
+  winget_ids:
+    - Microsoft.PowerToys
+    - RealVNC.VNCViewer
+
+# KeepingYouAwake / Caffeine
+keepingyouawake:
+  winget_ids:
+    - Microsoft.PowerToys
+    - 9NBLGGH4R0N7  # Caffeine
+caffeine:
+  winget_ids:
+    - 9NBLGGH4R0N7
+    - Microsoft.PowerToys
+
+# Cheatsheet (macOS)
+cheatsheet:
+  winget_ids:
+    - Microsoft.PowerToys
+    - 9NBLGGH5FV99
+
+# Horos (medical imaging - macOS)
+horos:
+  winget_ids:
+    - 3D Slicer
+    - RadiAntViewer
+  choco_packages:
+    - slicer
+    - radiantviewer
+
+# Lunchy (launchd)
+lunchy:
+  winget_ids:
+    - NSSM.NSSM
+    - 9NBLGGH5FV99
+
+# Max (audio)
+max:
+  winget_ids:
+    - Audacity.Audacity
+    - Reaper
+
+# Paintbrush (macOS)
+paintbrush:
+  winget_ids:
+    - Paint.NET.Paint.NET
+    - GIMP.GIMP
+pinta:
+  winget_ids:
+    - Paint.NET.Paint.NET
+    - GIMP.GIMP
+
+# Pencil (sketching)
+pencil:
+  winget_ids:
+    - Pencil.Pencil
+    - draw.io.draw.io
+
+# Prey (device tracking)
+prey:
+  winget_ids:
+    - Prey.Prey
+    - 9NBLGGH4QKL2
+
+# Sequel Pro (MySQL client)
+sequel-pro:
+  winget_ids:
+    - HeidiSQL.HeidiSQL
+    - MySQL.MySQLWorkbench
+mysqlworkbench:
+  winget_ids:
+    - MySQL.MySQLWorkbench
+    - HeidiSQL.HeidiSQL
+
+# Robomongo (MongoDB client)
+robomongo:
+  winget_ids:
+    - MongoDB.Compass
+    - MongoDB.Compass.IsolatedEdition
+
+# Robomongo / Compass
+# (MongoDB Compass is in main Windows manifest)
+
+# Spring Tool Suite (Eclipse-based)
+springtoolsuite:
+  winget_ids:
+    - EclipseAdoptium.Temurin.17.JDK
+    - Microsoft.VisualStudioCode
+  choco_packages:
+    - springtoolsuite
+
+# Visual Paradigm CE
+visual-paradigm-ce:
+  winget_ids:
+    - draw.io.draw.io
+    - Microsoft.VisualStudioCode
+
+# YourKit (Java profiler)
+yourkit-java-profiler:
+  winget_ids:
+    - Microsoft.VisualStudioCode
+    - JetBrains.IntelliJ IDEA.Community
+
+# Yed (graph editor)
+yed:
+  winget_ids:
+    - draw.io.draw.io
+    - yWorks.yed
+
+# NTFSTool (read/write NTFS on macOS)
+ntfstool:
+  winget_ids:
+    - 7zip.7zip
+    - ParagonSoftware.ParagonNTFS
+paragon-ntfs:
+  winget_ids:
+    - ParagonSoftware.ParagonNTFS
+    - 7zip.7zip
+
+# XQuartz (X11 on macOS) - no direct Windows equivalent (Windows has WSL/X servers)
+xquartz:
+  winget_ids:
+    - Microsoft.WSL
+    - X.Org.Xming
+
+# Java 6/7 (old runtimes - use Temurin on Windows)
+java6:
+  winget_ids:
+    - EclipseAdoptium.Temurin.8.JDK
+    - Microsoft.OpenJDK.17
+java7:
+  winget_ids:
+    - EclipseAdoptium.Temurin.8.JDK
+    - Microsoft.OpenJDK.17
+
+# AdoptOpenJDK variants (now Eclipse Temurin)
+adoptopenjdk:
+  winget_ids:
+    - EclipseAdoptium.Temurin.17.JDK
+    - Microsoft.OpenJDK.17
+adoptopenjdk9:
+adoptopenjdk11:
+adoptopenjdk14:
+adoptopenjdk15:
+  winget_ids:
+    - EclipseAdoptium.Temurin.17.JDK
+    - Microsoft.OpenJDK.17
+# (empty entries above inherit from adoptopenjdk; list each with same winget_ids if needed)
+
+# Silverlight (deprecated; no real Windows alternative needed - Edge handles)
+silverlight:
+  winget_ids:
+    - Microsoft.Edge
+    - Google.Chrome
+
+# Music Manager (Google - discontinued)
+music-manager:
+  winget_ids:
+    - Google.Drive
+    - Dropbox.Dropbox
+
+# Google Plus / Photos backup (discontinued)
+google-plus-auto-backup:
+google-photos-backup:
+  winget_ids:
+    - Google.Drive
+    - Dropbox.Dropbox
+
+# DuckDuckGo (browser - use browser package)
+duckduckgo:
+  winget_ids:
+    - Mozilla.Firefox
+    - Google.Chrome
+
+# Colloquy (IRC)
+colloquy:
+  winget_ids:
+    - HexChat.HexChat
+    - 9NBLGGH4R0N7
+
+# ExifRenamer
+exifrenamer:
+  winget_ids:
+    - Microsoft.PowerToys
+    - Bulk Rename Utility
+
+# MediaHuman YouTube Downloader
+mediahuman-youtube-downloader:
+  winget_ids:
+    - yt-dlp.yt-dlp
+    - 9NBLGGH4N3F3
+
+# Malwarebytes (same product on Windows - use main manifest)
+# malwarebytes-anti-malware: already on Windows
+
+# Keybase (discontinued - use alternatives)
+keybase:
+  winget_ids:
+    - KeePassXCTeam.KeePassXC
+    - 9NBLGGH4R0N7
+
+# JD-GUI (Java decompiler)
+jd-gui:
+  winget_ids:
+    - 9NBLGGH4N3F3
+  choco_packages:
+    - jd-gui
+
+# Vysor (Android screen mirroring)
+vysor:
+  winget_ids:
+    - Google.AndroidStudio
+    - 9NBLGGH4N3F3
+
+# xld (already above)
+# XnViewMP is cross-platform - in main manifest
+
+# Add more as needed. After editing, run: python3 scripts/merge-manifests.py

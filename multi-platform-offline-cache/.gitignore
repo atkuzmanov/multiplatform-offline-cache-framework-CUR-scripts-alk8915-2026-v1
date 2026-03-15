@@ -1,0 +1,8 @@
+# Cache contents (downloaded installers – can be large)
+cache/
+
+# Local path config (may contain machine-specific paths)
+config/paths.env
+
+# Generated manifests (regenerate with scripts/merge-manifests.py)
+config/generated/*.txt
