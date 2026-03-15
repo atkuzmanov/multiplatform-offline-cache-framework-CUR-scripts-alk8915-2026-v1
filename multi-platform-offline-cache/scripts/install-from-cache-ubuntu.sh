@@ -78,7 +78,7 @@ if command -v snap >/dev/null 2>&1 && ls "$CACHE_DIR/snap/"*.snap >/dev/null 2>&
       assertfile="${snapfile%.snap}.assert"
       [[ -f "$assertfile" ]] && sudo snap ack "$assertfile"
       extra="${snap_args[$pkg]:-}"
-      sudo snap install "$snapfile" $extra 2>/dev/null || sudo snap install "$snapfile" --dangerous $extra
+      sudo snap install "$snapfile" "$extra" 2>/dev/null || sudo snap install "$snapfile" --dangerous "$extra"
     fi
   done
 fi

@@ -117,7 +117,7 @@ if want_feature INSTALL_SNAPS; then
     [[ -z "$pkg" || "$pkg" =~ ^# ]] && continue
     [[ -n "$flag" ]] && ! want_feature "$flag" && continue
     log_info "Downloading snap: $pkg"
-    (cd "$CACHE_DIR/snap" && snap download $pkg $args 2>/dev/null) || log_warn "Snap download failed: $pkg"
+    (cd "$CACHE_DIR/snap" && snap download "$pkg" "$args" 2>/dev/null) || log_warn "Snap download failed: $pkg"
   done < "$ROOT_DIR/manifests/snap-packages.txt"
 fi
 
